@@ -1,0 +1,49 @@
+public class PizzaApplicationHandler {
+    public static void pizza(List<pizza__c> pizzaRec){
+        for ( Pizza__c pz : pizzaRec){
+            if(pz.name.contains('Margretha') && pz.name.contains('Paneer Makhani') ){
+                pz.Amount__c = '550';
+            }
+            if( pz.name.contains('Paneer Makhani')){
+                pz.Amount__c = '350';
+            }
+            if(pz.name == 'Margretha'){
+                pz.Amount__c = '200';
+            }
+            if(pz.name == 'Tomato Pizza'){
+                pz.Amount__c = '100';
+            }
+            if(pz.name == 'Onion Pizza'){
+                pz.Amount__c = '100';
+            }
+            
+            if(pz.name.contains('Margretha') && pz.name.contains('Paneer Makhani') && pz.name.contains('Tomato Pizza') && pz.name.contains('Onion Pizza') ){
+                pz.Amount__c = '750';
+            }
+            if(pz.name.contains('Margretha') && pz.name.contains('Paneer Makhani') && pz.name.contains('Tomato Pizza')){
+                pz.Amount__c = '750';
+            }
+            if(pz.name == 'Chicken Pizza'){
+                pz.Amount__c = '400';
+            }
+            if(pz.name == 'Paneer Chicken'){
+                pz.Amount__c = '400';
+            }
+            if(pz.name.contains('Paneer Chicken') && pz.name.contains('Chicken Pizza') ){
+                pz.Amount__c = '800';
+            }
+            if(pz.name.contains('Paneer Chicken') && pz.name.contains('Paneer Makhani') ){
+                pz.Amount__c = '750';
+            }
+            if(pz.name.contains('Paneer Chicken') && pz.name.contains('Margretha') ){
+                pz.Amount__c = '750';
+            }
+            if(pz.name.contains('Paneer Chicken') && pz.name.contains('Tomato Pizza') ){
+                pz.Amount__c = '500';
+            }
+            if(pz.name.contains('Paneer Chicken') && pz.name.contains('Onion Pizza') ){
+                pz.Amount__c = '500';
+            }
+        }
+    }
+}
