@@ -1,0 +1,12 @@
+trigger pizzaApp on Pizza__c (before insert, before update) {
+    if(trigger.isbefore  && trigger.isinsert){
+        
+        PizzaApplicationHandler.pizza(trigger.new);
+        //UpdatePizzaApplicationHandler.updatePizza(trigger.new);
+    }
+    if(trigger.isupdate){
+        PizzaApplicationHandler.pizza(trigger.new);
+        
+    }
+    
+}
